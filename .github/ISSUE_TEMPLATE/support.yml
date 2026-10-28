@@ -1,0 +1,49 @@
+name: Product support
+description: Ask a question or report a problem with Smoke-Free Realm.
+title: "[Support]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include passwords, private health information, exported data, or other sensitive personal information.
+
+        For the privacy policy, visit https://bright103huang.github.io/smoke-free-realm-support/
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Workday tracking
+        - Craving support
+        - Language or display
+        - Data export or deletion
+        - Store installation
+        - Privacy question
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Extension version
+      description: The version shown in the extension details, if available.
+      placeholder: "0.0.1"
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem without including sensitive personal data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I have removed passwords, private health information, exported data, and other sensitive personal information.
+          required: true
